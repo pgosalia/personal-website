@@ -4,7 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Parsh Gosalia</title>
-  <meta name="description" content="Personal website of Parsh Gosalia.">
+  <meta name="description" content="Parsh Gosalia is a cybersecurity engineer in New Jersey focused on incident response, security engineering, and community cyber defense.">
+  <meta name="theme-color" content="#fbfaf8">
+  <meta property="og:title" content="Parsh Gosalia">
+  <meta property="og:description" content="Cybersecurity engineer focused on incident response and community cyber defense.">
+  <meta property="og:type" content="website">
+  <!-- Simple "PG" icon for the browser tab -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f5d50'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3EPG%3C/text%3E%3C/svg%3E">
 
   <style>
     /* ---------- Colors & fonts: change these to restyle the whole site ---------- */
@@ -47,6 +53,23 @@
     nav ul a { color: var(--muted); text-decoration: none; }
     nav ul a:hover { color: var(--text); }
 
+    .skip { position: absolute; left: -9999px; }
+    .skip:focus { left: 16px; top: 16px; background: var(--bg); padding: 8px 12px; z-index: 10; }
+
+    .hero .eyebrow { font-size: 14px; letter-spacing: 0.04em; color: var(--accent); font-weight: 600; margin: 0 0 14px; }
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 10px 20px;
+      background: var(--accent);
+      color: var(--bg);
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .button:hover { opacity: 0.9; text-decoration: none; }
+
     .hero { padding: 88px 0 72px; }
     .hero h1 {
       font-size: clamp(2.4rem, 7vw, 3.4rem);
@@ -86,12 +109,15 @@
     @media (max-width: 480px) {
       body { font-size: 17px; }
       .hero { padding: 56px 0 48px; }
-      nav ul { gap: 16px; }
+      nav { flex-direction: column; align-items: flex-start; gap: 8px; }
+      nav ul { gap: 18px; }
     }
+    @media print { nav, .button { display: none; } body { font-size: 12pt; } }
   </style>
 </head>
 
 <body>
+  <a class="skip" href="#top">Skip to content</a>
   <div class="wrap">
 
     <header>
@@ -99,6 +125,7 @@
         <a class="brand" href="#top">Parsh Gosalia</a>
         <ul>
           <li><a href="#about">About</a></li>
+          <li><a href="#technologies">Technologies</a></li>
           <li><a href="#credentials">Credentials</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -109,8 +136,10 @@
 
       <!-- ===== INTRO: edit the name and the one-line summary ===== -->
       <div class="hero">
+        <p class="eyebrow">Cybersecurity Engineer &middot; New Jersey</p>
         <h1>Parsh Gosalia</h1>
         <p>Cybersecurity engineer protecting healthcare systems, with a focus on practical incident response and community cyber defense.</p>
+        <a class="button" href="#contact">Get in touch</a>
       </div>
 
       <!-- ===== ABOUT: replace these paragraphs with your own words. Each <p> is one paragraph. ===== -->

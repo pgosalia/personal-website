@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parsh Gosalia</title>
+  <meta name="description" content="Personal website of Parsh Gosalia.">
+
+  <style>
+    /* ---------- Colors & fonts: change these to restyle the whole site ---------- */
+    :root {
+      --bg: #fbfaf8;
+      --text: #1f2328;
+      --muted: #5f6670;
+      --line: #e6e3de;
+      --accent: #2f5d50;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #151716;
+        --text: #ebe9e4;
+        --muted: #9a9f98;
+        --line: #2a2d2b;
+        --accent: #8fc2b0;
+      }
+    }
+
+    /* ---------- Layout ---------- */
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 18px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 640px; margin: 0 auto; padding: 0 24px; }
+
+    header { padding: 28px 0; }
+    nav { display: flex; justify-content: space-between; align-items: center; font-size: 15px; }
+    nav .brand { font-weight: 600; color: var(--text); text-decoration: none; }
+    nav ul { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; }
+    nav ul a { color: var(--muted); text-decoration: none; }
+    nav ul a:hover { color: var(--text); }
+
+    .hero { padding: 88px 0 72px; }
+    .hero h1 {
+      font-size: clamp(2.4rem, 7vw, 3.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+    }
+    .hero p { font-size: 1.25rem; color: var(--muted); margin: 0; max-width: 32em; }
+
+    section { padding: 56px 0; border-top: 1px solid var(--line); }
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 24px;
+    }
+    section p { margin: 0 0 1.1em; }
+
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+
+    .contact-list { list-style: none; margin: 0; padding: 0; }
+    .contact-list li {
+      display: flex;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .contact-list li:last-child { border-bottom: 0; }
+    .contact-list span { width: 96px; flex-shrink: 0; color: var(--muted); font-size: 15px; padding-top: 2px; }
+
+    footer { padding: 40px 0 56px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+    @media (max-width: 480px) {
+      body { font-size: 17px; }
+      .hero { padding: 56px 0 48px; }
+      nav ul { gap: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header>
+      <nav>
+        <a class="brand" href="#top">Parsh Gosalia</a>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#credentials">Credentials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="top">
+
+      <!-- ===== INTRO: edit the name and the one-line summary ===== -->
+      <div class="hero">
+        <h1>Parsh Gosalia</h1>
+        <p>Cybersecurity engineer protecting healthcare systems, with a focus on practical incident response and community cyber defense.</p>
+      </div>
+
+      <!-- ===== ABOUT: replace these paragraphs with your own words. Each <p> is one paragraph. ===== -->
+      <section id="about">
+        <h2>About</h2>
+        <p>I'm a cybersecurity engineer with more than five years in IT and security operations. For the past two years I've worked in a healthcare environment, where I help detect, investigate, and respond to security incidents and keep the systems people depend on safe.</p>
+        <p>My day-to-day covers building and tuning detections, configuring endpoint, network, email, and identity protections, and shaping security policy around NIST CSF and HIPAA. I also train colleagues, because good security depends as much on people as on tools.</p>
+        <p>I care about practical, well-documented work and about protecting the organizations that serve their communities. I'm looking to put these skills toward public-sector and community cyber defense in New Jersey.</p>
+        <p>I started in IT support and moved into dedicated security engineering. I hold an MS in Data Science and AI and a BS in Computer Information Systems.</p>
+      </section>
+
+      <!-- ===== TECHNOLOGIES: one <li> per group; edit the text after the label ===== -->
+      <section id="technologies">
+        <h2>Technologies</h2>
+        <ul class="contact-list">
+          <li><span>Endpoint</span>CrowdStrike, Carbon Black</li>
+          <li><span>SIEM</span>CrowdStrike Next-Gen SIEM</li>
+          <li><span>Network</span>Palo Alto, Cisco Firepower, Cisco ASA, Cisco Umbrella, Cisco Stealthwatch</li>
+          <li><span>Email</span>Proofpoint</li>
+          <li><span>Identity</span>Cisco Duo, SailPoint, Azure Conditional Access, ManageEngine AD Self Service</li>
+          <li><span>Cloud</span>Microsoft Azure, Microsoft 365</li>
+          <li><span>Frameworks</span>NIST CSF, HIPAA</li>
+        </ul>
+      </section>
+
+      <!-- ===== CREDENTIALS: one <li> per item ===== -->
+      <section id="credentials">
+        <h2>Certifications &amp; Education</h2>
+        <ul class="contact-list">
+          <li><span>Certified</span>EC-Council ECSA &middot; CompTIA CySA+, Security+, Network+, A+</li>
+          <li><span>Education</span>MS, Data Science and AI, University of Phoenix (2025)</li>
+          <li><span></span>BS, Computer Information Systems, Stockton University (2023)</li>
+        </ul>
+      </section>
+
+      <!-- ===== CONTACT: edit the email and add or remove links. Each <li> is one row. ===== -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>The best way to reach me is by email. I'm happy to hear from you.</p>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:parshgosalia@protonmail.com">parshgosalia@protonmail.com</a></li>
+          <li><span>Location</span>Berlin, New Jersey</li>
+          <!-- Add more rows by copying a line like the ones below, removing the comment markers, and editing it.
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/your-name">linkedin.com/in/your-name</a></li>
+          <li><span>GitHub</span><a href="https://github.com/your-name">github.com/your-name</a></li>
+          -->
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      &copy; 2026 Parsh Gosalia
+    </footer>
+
+  </div>
+</body>
+</html>

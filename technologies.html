@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technologies | Parsh Gosalia</title>
+  <meta name="description" content="Security platforms and technologies Parsh Gosalia has hands-on experience with.">
+  <meta name="theme-color" content="#fbfaf8">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f5d50'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3EPG%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header>
+      <nav>
+        <a class="brand" href="index.html">Parsh Gosalia</a>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="technologies.html" aria-current="page">Technologies</a></li>
+          <li><a href="index.html#credentials">Credentials</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="hero compact" id="main">
+      <p class="eyebrow">Technologies</p>
+      <h1>What I work with</h1>
+      <p>Security platforms and tools I've deployed, configured, and run day to day.</p>
+    </div>
+  </div>
+
+  <!--
+    ===== CAROUSELS =====
+    Each <div class="tile"> is one technology. To add one, copy a tile and edit:
+      - the two-letter badge (inside class="icon")
+      - the name (inside <strong>) and the category (inside <small>)
+    To use a real logo instead of letters, save the image in an "images" folder and replace
+    the letters with:  <img src="images/crowdstrike.svg" alt="">
+    The carousel repeats the list automatically, so list each technology only once.
+  -->
+  <div class="marquee" aria-label="Technologies, scrolling list">
+    <div class="track">
+      <div class="tile"><div class="icon"><img class="color" src="images/crowdstrike.svg" alt=""></div><div><strong>CrowdStrike</strong><small>Endpoint &amp; SIEM</small></div></div>
+      <div class="tile"><div class="icon">CB</div><div><strong>Carbon Black</strong><small>Endpoint</small></div></div>
+      <div class="tile"><div class="icon"><img class="color" src="images/palo-alto-networks.svg" alt=""></div><div><strong>Palo Alto</strong><small>Firewall</small></div></div>
+      <div class="tile"><div class="icon"><img src="images/cisco.svg" alt=""></div><div><strong>Cisco Firepower</strong><small>Firewall</small></div></div>
+      <div class="tile"><div class="icon"><img src="images/cisco.svg" alt=""></div><div><strong>Cisco ASA</strong><small>Firewall</small></div></div>
+      <div class="tile"><div class="icon"><img src="images/cisco.svg" alt=""></div><div><strong>Cisco Umbrella</strong><small>DNS security</small></div></div>
+      <div class="tile"><div class="icon"><img src="images/cisco.svg" alt=""></div><div><strong>Cisco Stealthwatch</strong><small>Network visibility</small></div></div>
+    </div>
+  </div>
+
+  <div class="marquee reverse" aria-label="More technologies, scrolling list">
+    <div class="track">
+      <div class="tile"><div class="icon">PP</div><div><strong>Proofpoint</strong><small>Email security</small></div></div>
+      <div class="tile"><div class="icon"><img class="color" src="images/duo.svg" alt=""></div><div><strong>Cisco Duo</strong><small>MFA</small></div></div>
+      <div class="tile"><div class="icon">SP</div><div><strong>SailPoint</strong><small>Identity governance</small></div></div>
+      <div class="tile"><div class="icon"><img class="color" src="images/1password.svg" alt=""></div><div><strong>1Password</strong><small>Password management</small></div></div>
+      <div class="tile"><div class="icon"><img src="images/microsoftazure.svg" alt=""></div><div><strong>Microsoft Azure</strong><small>Cloud &amp; conditional access</small></div></div>
+      <div class="tile"><div class="icon"><img class="color" src="images/microsoft-365.svg" alt=""></div><div><strong>Microsoft 365</strong><small>Cloud security</small></div></div>
+      <div class="tile"><div class="icon">ME</div><div><strong>ManageEngine</strong><small>AD self service</small></div></div>
+      <div class="tile"><div class="icon">NIST</div><div><strong>NIST CSF</strong><small>Framework</small></div></div>
+      <div class="tile"><div class="icon">HI</div><div><strong>HIPAA</strong><small>Compliance</small></div></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- ===== DETAILS: one <li> per group ===== -->
+    <section class="stack">
+      <h2>By area</h2>
+      <ul class="contact-list">
+        <li><span>Endpoint</span>CrowdStrike, Carbon Black</li>
+        <li><span>SIEM</span>CrowdStrike Next-Gen SIEM</li>
+        <li><span>Network</span>Palo Alto, Cisco Firepower, Cisco ASA, Cisco Umbrella, Cisco Stealthwatch</li>
+        <li><span>Email</span>Proofpoint</li>
+        <li><span>Identity</span>Cisco Duo, SailPoint, 1Password, Azure Conditional Access, ManageEngine AD Self Service</li>
+        <li><span>Cloud</span>Microsoft Azure, Microsoft 365</li>
+        <li><span>Frameworks</span>NIST CSF, HIPAA</li>
+      </ul>
+      <p style="margin-top:32px"><a href="index.html">&larr; Back to home</a></p>
+    </section>
+
+    <footer>
+      &copy; 2026 Parsh Gosalia
+    </footer>
+  </div>
+
+  <script>
+    // Repeats each carousel's tiles once so it loops seamlessly (skipped if the visitor prefers reduced motion).
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.querySelectorAll(".track").forEach(function (track) {
+        Array.from(track.children).forEach(function (tile) {
+          var copy = tile.cloneNode(true);
+          copy.setAttribute("aria-hidden", "true");
+          track.appendChild(copy);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

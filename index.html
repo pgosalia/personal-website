@@ -11,109 +11,7 @@
   <meta property="og:type" content="website">
   <!-- Simple "PG" icon for the browser tab -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f5d50'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3EPG%3C/text%3E%3C/svg%3E">
-
-  <style>
-    /* ---------- Colors & fonts: change these to restyle the whole site ---------- */
-    :root {
-      --bg: #fbfaf8;
-      --text: #1f2328;
-      --muted: #5f6670;
-      --line: #e6e3de;
-      --accent: #2f5d50;
-      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #151716;
-        --text: #ebe9e4;
-        --muted: #9a9f98;
-        --line: #2a2d2b;
-        --accent: #8fc2b0;
-      }
-    }
-
-    /* ---------- Layout ---------- */
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--font);
-      font-size: 18px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    .wrap { max-width: 640px; margin: 0 auto; padding: 0 24px; }
-
-    header { padding: 28px 0; }
-    nav { display: flex; justify-content: space-between; align-items: center; font-size: 15px; }
-    nav .brand { font-weight: 600; color: var(--text); text-decoration: none; }
-    nav ul { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; }
-    nav ul a { color: var(--muted); text-decoration: none; }
-    nav ul a:hover { color: var(--text); }
-
-    .skip { position: absolute; left: -9999px; }
-    .skip:focus { left: 16px; top: 16px; background: var(--bg); padding: 8px 12px; z-index: 10; }
-
-    .hero .eyebrow { font-size: 14px; letter-spacing: 0.04em; color: var(--accent); font-weight: 600; margin: 0 0 14px; }
-    .button {
-      display: inline-block;
-      margin-top: 28px;
-      padding: 10px 20px;
-      background: var(--accent);
-      color: var(--bg);
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .button:hover { opacity: 0.9; text-decoration: none; }
-
-    .hero { padding: 88px 0 72px; }
-    .hero h1 {
-      font-size: clamp(2.4rem, 7vw, 3.4rem);
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      margin: 0 0 16px;
-    }
-    .hero p { font-size: 1.25rem; color: var(--muted); margin: 0; max-width: 32em; }
-
-    section { padding: 56px 0; border-top: 1px solid var(--line); }
-    h2 {
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 0 0 24px;
-    }
-    section p { margin: 0 0 1.1em; }
-
-    a { color: var(--accent); text-underline-offset: 3px; }
-    a:hover { text-decoration-thickness: 2px; }
-
-    .contact-list { list-style: none; margin: 0; padding: 0; }
-    .contact-list li {
-      display: flex;
-      gap: 16px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .contact-list li:last-child { border-bottom: 0; }
-    .contact-list span { width: 96px; flex-shrink: 0; color: var(--muted); font-size: 15px; padding-top: 2px; }
-
-    footer { padding: 40px 0 56px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
-
-    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
-    @media (max-width: 480px) {
-      body { font-size: 17px; }
-      .hero { padding: 56px 0 48px; }
-      nav { flex-direction: column; align-items: flex-start; gap: 8px; }
-      nav ul { gap: 18px; }
-    }
-    @media print { nav, .button { display: none; } body { font-size: 12pt; } }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -125,7 +23,7 @@
         <a class="brand" href="#top">Parsh Gosalia</a>
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#technologies">Technologies</a></li>
+          <li><a href="technologies.html">Technologies</a></li>
           <li><a href="#credentials">Credentials</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -151,18 +49,11 @@
         <p>I started in IT support and moved into dedicated security engineering. I hold an MS in Data Science and AI and a BS in Computer Information Systems.</p>
       </section>
 
-      <!-- ===== TECHNOLOGIES: one <li> per group; edit the text after the label ===== -->
+      <!-- ===== TECHNOLOGIES: short teaser; the full list lives on technologies.html ===== -->
       <section id="technologies">
         <h2>Technologies</h2>
-        <ul class="contact-list">
-          <li><span>Endpoint</span>CrowdStrike, Carbon Black</li>
-          <li><span>SIEM</span>CrowdStrike Next-Gen SIEM</li>
-          <li><span>Network</span>Palo Alto, Cisco Firepower, Cisco ASA, Cisco Umbrella, Cisco Stealthwatch</li>
-          <li><span>Email</span>Proofpoint</li>
-          <li><span>Identity</span>Cisco Duo, SailPoint, Azure Conditional Access, ManageEngine AD Self Service</li>
-          <li><span>Cloud</span>Microsoft Azure, Microsoft 365</li>
-          <li><span>Frameworks</span>NIST CSF, HIPAA</li>
-        </ul>
+        <p>Hands-on with endpoint, SIEM, firewall, email, identity, and cloud security platforms, including CrowdStrike, Palo Alto, Cisco, Proofpoint, 1Password, and Microsoft Azure.</p>
+        <p><a href="technologies.html">See all technologies &rarr;</a></p>
       </section>
 
       <!-- ===== CREDENTIALS: one <li> per item ===== -->
